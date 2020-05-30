@@ -24,7 +24,7 @@ gst-libav-1.16.0.tar.xz)
 C. Install and Compile OpenCV from source with Gstreamer support
 -The speicific instruction I referenced is [here](https://medium.com/@galaktyk01/how-to-build-opencv-with-gstreamer-b11668fa09c)
 ###### NOTE: You can skip to step 4 as steps 1-3 is completed in A and B.
-###### NOTE: On Ubuntu system, there's onet step that you need to modify in the above instruction. In step 5.Building,you need to change the double quotes
+###### NOTE: On Ubuntu system, there's one step that you need to modify in the above instruction. In step 5.Building,you need to change the double quotes
 in the cmake insturction to single quote. So the cmake command would be:
 ```
 cmake -D CMAKE_BUILD_TYPE=RELEASE \
@@ -41,11 +41,12 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 ```
 Otherwise, there will be a syntax error.
 
-###### NOTE: After you finish building OpenCV, make sure to if the setup is successful by doing the following on the terminal:
+###### NOTE: After you finish building OpenCV, make sure to test if the setup is successful by doing the following on the terminal:
 ```python
 import cv2
 print(cv2.getBuildInformation())
 ```
+###### The GStreamer option should be "Yes" and there should be a section for Python3.  
 If your system cannot locate OpenCV, try moving the .so file to the source code folder. Check out step 5 of the link 
 [here](https://www.pyimagesearch.com/2018/05/28/ubuntu-18-04-how-to-install-opencv/) to learn more about this step.
 
