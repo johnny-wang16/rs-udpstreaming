@@ -53,7 +53,7 @@ If your system cannot locate OpenCV, try moving the .so file to the source code 
 
 ##### D. Get Intel Realsene SDK
 The specific link I referenced is [here](https://github.com/IntelRealSense/librealsense/blob/master/doc/installation.md).Make sure to read through it and follow every single step. The instructions listed is pretty clear and should be able to guide
-you through the installation concepts.
+you through the installation process.
 
 #### Set up instructions for the client computer (the one that's going to recieve streams through UDP connection):
 You will still need python, Gstreamer and OpenCV for the client. You don't need the realsense SDK though.
