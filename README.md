@@ -16,12 +16,12 @@ to set up with virtualenv but I didn't have time for it.
 ##### B. Install Gstreamer from source:
 The specific instructions I referenced is [here](https://blog.csdn.net/weixin_30483697/article/details/101178427?depth_1-utm_source=distribute.pc_relevant.none-task&utm_source=distribute.pc_relevant.none-task).
 
--I recommend Gstreamer version 1.8.3.
--I tried 1.16.0 but seems like it is not compatible with OpenCV. I kept getting error during the sudo make stage 
+- I recommend Gstreamer version 1.8.3.
+- I tried 1.16.0 but seems like it is not compatible with OpenCV. I kept getting error during the sudo make stage 
 even if the cmake step works fine. 
 
 ###### NOTE: Aside from the package described in the above instruction, you also need to download gst-rtsp-server-1.xx.xx.tar.xz and compile it the same way as other packages (ex:gst-plugins-ugly-1.16.0.tar.xz , gst-libav-1.16.0.tar.xz)
--I am surprised there's a lack of English instructions to build Gstreamer from source. I'll make one in the future.
+- I am surprised there's a lack of English instructions to build Gstreamer from source. I'll make one in the future.
 
 ##### C. Install and Compile OpenCV from source with Gstreamer support
 -The speicific instruction I referenced is [here](https://medium.com/@galaktyk01/how-to-build-opencv-with-gstreamer-b11668fa09c)
