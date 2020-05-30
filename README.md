@@ -26,8 +26,7 @@ even if the cmake step works fine.
 ##### C. Install and Compile OpenCV from source with Gstreamer support
 - The speicific instruction I referenced is [here](https://medium.com/@galaktyk01/how-to-build-opencv-with-gstreamer-b11668fa09c)
 ###### NOTE: You can skip to step 4 as steps 1-3 is completed in A and B.
-###### NOTE: On Ubuntu system, there's one step that you need to modify in the above instruction. In step 5.Building,you need to change the double quotes
-in the cmake insturction to single quote. So the cmake command would be:
+###### NOTE: On Ubuntu system, there's one step that you need to modify in the above instruction. In step 5.Building,you need to change the double quotes in the cmake insturction to single quote. So the cmake command would be:
 ```
 cmake -D CMAKE_BUILD_TYPE=RELEASE \
 -D INSTALL_PYTHON_EXAMPLES=ON \
