@@ -17,7 +17,7 @@ B. Install Gstreamer from source.
 -I tried 1.16.0 but seems like it is not compatible with OpenCV. I kept getting error during the sudo make stage 
 even if the cmake step works fine. 
 -The specific instructions I referenced is [here](https://blog.csdn.net/weixin_30483697/article/details/101178427?depth_1-utm_source=distribute.pc_relevant.none-task&utm_source=distribute.pc_relevant.none-task).
-###### NOTE: Aside from the package described in the above instruction, you also need to download gst-rtsp-server-1.8.3.tar.xz and compile it the same way as other packages (ex:gst-plugins-ugly-1.16.0.tar.xz gst-libav-1.16.0.tar.xz)
+###### NOTE: Aside from the package described in the above instruction, you also need to download gst-rtsp-server-1.8.3.tar.xz and compile it the same way as other packages (ex:gst-plugins-ugly-1.16.0.tar.xz , gst-libav-1.16.0.tar.xz)
 -I am surprised there's a lack of English instructions to build Gstreamer from source. I'll make one in the future.
 
 C. Install and Compile OpenCV from source with Gstreamer support
@@ -54,7 +54,8 @@ The specific link I referenced is [here](https://github.com/IntelRealSense/libre
 you through the installation concepts.
 
 #### Set up instructions for the client computer (the one that's going to recieve streams through UDP connection):
-You will still need python, gstreamer and OpenCV for the client. You don't need the realsense SDK though.
+You will still need python, Gstreamer and OpenCV for the client. You don't need the realsense SDK though.
+
 Congratulations! That's it for the installation process.
 
 #### Running the code:
