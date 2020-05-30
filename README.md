@@ -5,6 +5,7 @@ The setup instruction is pretty long so bear with me for awhile and report issue
 
 #### Set up instructions for the host computer (the one that's attached to the intel realsene camera):
 A. Enviornment Setup:
+
 1. Set up virtual enviornment through anaconda and activate it. (Python version 3.5 is recommended because Opencv is only compatible with python 3.5)
 - I tried python 3.7 and 3.8 but was getting errors during runtime from OpenCV saying that the module python version mismatched
 - I also tried to set up virtual enviornment with virtualenv for some reason, the OpenCV cmake script cannot detect Python3. It's probably possible
@@ -12,11 +13,12 @@ to set up with virtualenv but I didn't have time for it.
 
 2. Getting Numpy by sudo apt-get or pip.
 
-B. Install Gstreamer from source.
--I got 1.8.3 and it works fine.
+B. Install Gstreamer from source:
+The specific instructions I referenced is [here](https://blog.csdn.net/weixin_30483697/article/details/101178427?depth_1-utm_source=distribute.pc_relevant.none-task&utm_source=distribute.pc_relevant.none-task).
+-I recommend Gstreamer version 1.8.3.
 -I tried 1.16.0 but seems like it is not compatible with OpenCV. I kept getting error during the sudo make stage 
 even if the cmake step works fine. 
--The specific instructions I referenced is [here](https://blog.csdn.net/weixin_30483697/article/details/101178427?depth_1-utm_source=distribute.pc_relevant.none-task&utm_source=distribute.pc_relevant.none-task).
+
 ###### NOTE: Aside from the package described in the above instruction, you also need to download gst-rtsp-server-1.8.3.tar.xz and compile it the same way as other packages (ex:gst-plugins-ugly-1.16.0.tar.xz , gst-libav-1.16.0.tar.xz)
 -I am surprised there's a lack of English instructions to build Gstreamer from source. I'll make one in the future.
 
