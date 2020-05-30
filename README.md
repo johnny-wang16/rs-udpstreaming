@@ -6,15 +6,15 @@ The setup instruction is pretty long so bear with me for awhile and report issue
 #### Set up instructions for the host computer (the one that's attached to the intel realsene camera):
 A. Enviornment Setup:
 1. Set up virtual enviornment through anaconda and activate it. (Python version 3.5 is recommended because Opencv is only compatible with python 3.5)
-- I tried python 3.7 and 3.8 but was getting errors during runtime from opencv saying that the module python version mismatched
-- I also tried to set up virtual enviornment with virtualenv for some reason, the opencv cmake script cannot detect Python3. It's probably possible
+- I tried python 3.7 and 3.8 but was getting errors during runtime from OpenCV saying that the module python version mismatched
+- I also tried to set up virtual enviornment with virtualenv for some reason, the OpenCV cmake script cannot detect Python3. It's probably possible
 to set up with virtualenv but I didn't have time for it.
 
 2. Getting Numpy by sudo apt-get or pip.
 
 B. Install Gstreamer from source.
 -I got 1.8.3 and it works fine.
--I tried 1.16.0 but seems like it is not compatible with opencv. I kept getting error during the sudo make stage 
+-I tried 1.16.0 but seems like it is not compatible with OpenCV. I kept getting error during the sudo make stage 
 even if the cmake step works fine. 
 -The specific instructions I referenced is [here](https://blog.csdn.net/weixin_30483697/article/details/101178427?depth_1-utm_source=distribute.pc_relevant.none-task&utm_source=distribute.pc_relevant.none-task).
 ###### NOTE: Aside from the package described in the above instruction, you also need to download gst-rtsp-server-1.8.3.tar.xz and compile it the same way as other packages (ex:gst-plugins-ugly-1.16.0.tar.xz
@@ -50,11 +50,11 @@ If your system cannot locate OpenCV, try moving the .so file to the source code 
 [here](https://www.pyimagesearch.com/2018/05/28/ubuntu-18-04-how-to-install-opencv/) to learn more about this step.
 
 D. Get Intel Realsene SDK
-The specific link I referenced is [here](https://github.com/IntelRealSense/librealsense/blob/master/doc/installation.md).Make sure to 
-read through it and follow every single step. The instructions listed is pretty clear and should be able to guide you through the installation concepts.
+The specific link I referenced is [here](https://github.com/IntelRealSense/librealsense/blob/master/doc/installation.md).Make sure to read through it and follow every single step. The instructions listed is pretty clear and should be able to guide
+you through the installation concepts.
 
 #### Set up instructions for the client computer (the one that's going to recieve streams through UDP connection):
-You will still need python, gstreamer and opencv for the client. You don't need the realsense SDK though.
+You will still need python, gstreamer and OpenCV for the client. You don't need the realsense SDK though.
 Congratulations! That's it for the installation process.
 
 #### Running the code:
