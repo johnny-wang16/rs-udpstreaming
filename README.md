@@ -62,11 +62,7 @@ Congratulations! That's it for the installation process.
 
 2. If you are not streaming from an intel realsense camera and streaming from a pre-recorded rosbag file instead (maybe for testing purposes), uncomment the line:
 `rs_cfg.enable_device_from_file("/home/johnny/Downloads/d435i_sample_data/d435i_walk_around.bag"); `
-and comment out the lines:
-```
-rs_cfg.enable_stream(RS2_STREAM_DEPTH, WIDTH, HEIGHT, RS2_FORMAT_Z16, FRAME);
-rs_cfg.enable_stream(RS2_STREAM_COLOR, WIDTH, HEIGHT, RS2_FORMAT_RGB8, FRAME);
-```
+and comment out the lines: `rs_cfg.enable_stream(RS2_STREAM_DEPTH, WIDTH, HEIGHT, RS2_FORMAT_Z16, FRAME); rs_cfg.enable_stream(RS2_STREAM_COLOR, WIDTH, HEIGHT, RS2_FORMAT_RGB8, FRAME);`
 , vice versa.
 
 3. Start the receiver first and then the sender.
