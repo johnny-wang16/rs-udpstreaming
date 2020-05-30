@@ -4,17 +4,18 @@ realsense device. It mainly uses Gstreamer(version 1.8.3) and Intel RealSense SD
 The setup instruction is pretty long so bear with me for awhile and report issues if anything abnormal happens.
 
 #### Set up instructions for the host computer (the one that's attached to the intel realsene camera):
-A. Enviornment Setup:
+##### A. Enviornment Setup:
 
 1. Set up virtual enviornment through anaconda and activate it. (Python version 3.5 is recommended because Opencv is only compatible with python 3.5)
 - I tried python 3.7 and 3.8 but was getting errors during runtime from OpenCV saying that the module python version mismatched
 - I also tried to set up virtual enviornment with virtualenv for some reason, the OpenCV cmake script cannot detect Python3. It's probably possible
 to set up with virtualenv but I didn't have time for it.
 
-2. Getting Numpy by sudo apt-get or pip.
+2. Getting Numpy by `sudo apt-get` or `pip`.
 
-B. Install Gstreamer from source:
+##### B. Install Gstreamer from source:
 The specific instructions I referenced is [here](https://blog.csdn.net/weixin_30483697/article/details/101178427?depth_1-utm_source=distribute.pc_relevant.none-task&utm_source=distribute.pc_relevant.none-task).
+
 -I recommend Gstreamer version 1.8.3.
 -I tried 1.16.0 but seems like it is not compatible with OpenCV. I kept getting error during the sudo make stage 
 even if the cmake step works fine. 
@@ -22,7 +23,7 @@ even if the cmake step works fine.
 ###### NOTE: Aside from the package described in the above instruction, you also need to download gst-rtsp-server-1.xx.xx.tar.xz and compile it the same way as other packages (ex:gst-plugins-ugly-1.16.0.tar.xz , gst-libav-1.16.0.tar.xz)
 -I am surprised there's a lack of English instructions to build Gstreamer from source. I'll make one in the future.
 
-C. Install and Compile OpenCV from source with Gstreamer support
+##### C. Install and Compile OpenCV from source with Gstreamer support
 -The speicific instruction I referenced is [here](https://medium.com/@galaktyk01/how-to-build-opencv-with-gstreamer-b11668fa09c)
 ###### NOTE: You can skip to step 4 as steps 1-3 is completed in A and B.
 ###### NOTE: On Ubuntu system, there's one step that you need to modify in the above instruction. In step 5.Building,you need to change the double quotes
@@ -51,7 +52,7 @@ print(cv2.getBuildInformation())
 If your system cannot locate OpenCV, try moving the .so file to the source code folder. Check out step 5 of the link 
 [here](https://www.pyimagesearch.com/2018/05/28/ubuntu-18-04-how-to-install-opencv/) to learn more about this step.
 
-D. Get Intel Realsene SDK
+##### D. Get Intel Realsene SDK
 The specific link I referenced is [here](https://github.com/IntelRealSense/librealsense/blob/master/doc/installation.md).Make sure to read through it and follow every single step. The instructions listed is pretty clear and should be able to guide
 you through the installation concepts.
 
