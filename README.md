@@ -1,9 +1,9 @@
-# Intoduction
+# rs-udpstreaming
 This repository contains an example application that streams both RGB and 16-bit depth data simultaneously from the intel
 realsense device. It mainly uses Gstreamer(version 1.8.3) and Intel RealSense SDK. I tested on my system which runs Ubuntu 16.04.
 The setup instruction is pretty long so bear with me for awhile and report issues if anything abnormal happens.
 
-# Set up instructions for the host computer (the one that's attached to the intel realsene camera):
+#### Set up instructions for the host computer (the one that's attached to the intel realsene camera):
 A. Enviornment Setup:
 1. Set up virtual enviornment through anaconda and activate it. (Python version 3.5 is recommended because Opencv is only compatible with python 3.5)
 - I tried python 3.7 and 3.8 but was getting errors during runtime from opencv saying that the module python version mismatched
@@ -53,11 +53,11 @@ D. Get Intel Realsene SDK
 The specific link I referenced is [here](https://github.com/IntelRealSense/librealsense/blob/master/doc/installation.md).Make sure to 
 read through it and follow every single step. The instructions listed is pretty clear and should be able to guide you through the installation concepts.
 
-# Set up instructions for the client computer (the one that's going to recieve streams through UDP connection):
+#### Set up instructions for the client computer (the one that's going to recieve streams through UDP connection):
 You will still need python, gstreamer and opencv for the client. You don't need the realsense SDK though.
 Congratulations! That's it for the installation process.
 
-# Running the code:
+#### Running the code:
 1. Make sure to change the IP address in both `stream.cpp` and `reciever.py`
 
 2. If you are not streaming from an intel realsense camera and streaming from a pre-recorded rosbag file instead (maybe for testing purposes), uncomment the line:
