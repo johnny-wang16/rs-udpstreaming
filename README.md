@@ -60,7 +60,7 @@ You will still need python, Gstreamer and OpenCV for the client. You don't need 
 
 Congratulations! That's it for the installation process.
 
-#### Running the code:
+#### Running the application:
 1. Make sure to change the IP address in both `stream.cpp` and `reciever.py`
 
 2. If you are not streaming from an intel realsense camera and streaming from a pre-recorded rosbag file instead (maybe for testing purposes), uncomment the line:
@@ -70,5 +70,5 @@ and comment out the lines: `rs_cfg.enable_stream(RS2_STREAM_DEPTH, WIDTH, HEIGHT
 
 3. Start the receiver first and then the sender.
 
-
-
+#### Implementation:
+The 16-bit raw depth image requires too much bandwidth to stream over WiFi. Therefore, compression is necessary if real-time streaming is desired. The way I impelment the depth compression is entirely based on [this paper](https://dev.intelrealsense.com/docs/depth-image-compression-by-colorization-for-intel-realsense-depth-cameras) published by Intel. After depth image colorization, the colorized depth image is then passed on to a common gstreamer H264 compression pipeline and sent through the network. 
